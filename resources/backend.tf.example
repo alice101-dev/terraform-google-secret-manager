@@ -1,0 +1,12 @@
+# Rename to backend.tf and fill in your values to store state remotely in GCS.
+# A remote backend with versioning + state locking is the production standard.
+#
+#   gsutil mb -l asia-southeast2 gs://my-tfstate-bucket
+#   gsutil versioning set on gs://my-tfstate-bucket
+
+terraform {
+  backend "gcs" {
+    bucket = "my-tfstate-bucket"
+    prefix = "secret-manager/prod"
+  }
+}

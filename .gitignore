@@ -1,0 +1,23 @@
+# Local .terraform directories
+**/.terraform/*
+
+# State files — never commit
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Variable files that may contain secrets (keep terraform.tfvars for the sample)
+*.auto.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Realised backend config (kept as backend.tf.example)
+backend.tf
+
+# CLI config / plans
+.terraformrc
+terraform.rc
+*.tfplan
